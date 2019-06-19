@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.RegisterFaceActivity">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.RegisterFaceActivity">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextureView
+                android:id="@+id/texture_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.arcsoft.arcfacedemo.widget.FaceRectView
+                android:id="@+id/face_rect_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/register_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入你的姓名"
+            android:inputType="text"
+            android:paddingLeft="18dp"
+            android:textColorHint="#8a8a8a"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"/>
+
+        <include
+            android:id="@+id/line_1"
+            layout="@layout/line_dimens"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            app:layout_constraintTop_toBottomOf="@+id/register_name"
+            app:layout_constraintBottom_toTopOf="@+id/register_serial"
+            />
+
+        <EditText
+            android:id="@+id/register_serial"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="请输入编号"
+            android:inputType="number"
+            android:paddingLeft="18dp"
+            android:textColorHint="#8a8a8a"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/register_name"
+            />
+
+        <include android:id="@+id/line_2"
+                 layout="@layout/line_dimens"
+                 android:layout_width="match_parent"
+                 android:layout_height="0.8dp"
+                 app:layout_constraintTop_toBottomOf="@+id/register_serial"
+                 />
+
+        <EditText
+            android:id="@+id/register_sex"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="请输入性别"
+            android:inputType="text"
+            android:paddingLeft="18dp"
+            android:textColorHint="#8a8a8a"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/line_2"
+            />
+
+        <include android:id="@+id/line_3"
+                 layout="@layout/line_dimens"
+                 android:layout_width="match_parent"
+                 android:layout_height="0.8dp"
+                 app:layout_constraintTop_toBottomOf="@+id/register_sex"/>
+
+        <EditText
+            android:id="@+id/register_age"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="请输入年龄"
+            android:inputType="text"
+            android:paddingLeft="18dp"
+            android:textColorHint="#8a8a8a"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/line_3"
+            />
+
+        <include android:id="@+id/lin_4"
+                 layout="@layout/line_dimens"
+                 android:layout_width="match_parent"
+                 android:layout_height="0.8dp"
+                 app:layout_constraintTop_toBottomOf="@+id/register_age"/>
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_height="46dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="注册"
+            app:layout_constraintTop_toBottomOf="@+id/lin_4"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
